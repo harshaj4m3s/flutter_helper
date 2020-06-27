@@ -8,6 +8,7 @@ except ImportError as ie:
         import subprocess
         import sys
         subprocess.check_call([sys.executable,'-m','pip','install','Pillow'])
+        from PIL import Image
     except Exception as ex:
         print('Network Error:\
             \n\tTry after connecting to network')
@@ -20,7 +21,7 @@ def image_creator(image,size,folder,name='ic_launcher.png'):
 
 
 if __name__=='__main__':
-    parser = argparse.ArgumentParser("Creates icons compatible to Android and iOS projects from an input image")
+    parser = argparse.ArgumentParser(description="Creates icons compatible to Android and iOS projects from an input image")
     parser.add_argument('--img',dest='img',required=True,help='Image to create icons from')
     parser.add_argument('--output',dest='output',required=False,help='Target folder name <<optional>> (Careful,\\\nOverwrites the existing contents of the directory if the directory is present             )')
     parser.add_argument('--android',required=False,type=lambda x: x in ['y','yes','true','True','Y'],default=True,help="Boolean Flag for Android \n\t['y','yes','true','True','Y']\t for True anything else for False")
