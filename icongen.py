@@ -99,6 +99,7 @@ def main():
             (180,180),(1024,1024)]
         for size in sizes:
             image_creator(img, size, ios_path, str(size[0])+'.png')
+    print("\nSaved Folder  \t  :",target_folder)
 if __name__=='__main__':
     sys.exit(main())
 
