@@ -26,7 +26,7 @@ finally:
 def image_creator(image,size,folder,name='ic_launcher.png'):
     '''Creates image of given size with given name in the given directory
     Arguments:
-        image  : <class 'PIL.JpegImagePlugin.JpegImageFile'>
+        image  : An :py:class:`~PIL.Image.Image` object.
         size   : <class 'tuple'>
         folder : <class 'str'>
         name   : <class 'str'>
